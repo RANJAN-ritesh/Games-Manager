@@ -1,0 +1,25 @@
+.MapParent{
+    width: 76rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 10rem;
+    border: 2px solid black;
+}
+.MoviesDiv{
+    width: 34rem;
+    display: flex;
+    margin: 1.5rem 1rem;
+    border: 1px solid black;
+    padding: 0.5rem 0.8rem;
+}
+.imgDiv>img{
+    width: 16rem;
+    height: 10rem;
+}
+.detailsDiv{
+    width: 18rem;
+    border: 1px solid black;
+    margin-left: 0.8rem;
+    line-height: 1rem;
+}
