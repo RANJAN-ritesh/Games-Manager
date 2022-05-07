@@ -7,6 +7,7 @@ export const Inputs = ()=>{
     let [poster,setPoster] = useState("")
     let [rating,setRating] = useState(0)
     let [director,setDirector] = useState("")
+    let [developer,setDeveloper] = useState("")
 
     function handleName(e){
         setName(e)
@@ -25,6 +26,9 @@ export const Inputs = ()=>{
     function handleDirector(e){
         setDirector(e)
     }
+    function handleDeveloper(e){
+        setDeveloper(e)
+    }
     function handleSave(){
         // const payload = 
         // console.log(payload)
@@ -32,18 +36,19 @@ export const Inputs = ()=>{
         //     method: 'POST',
         //     headers: {'Content-Type':'application/json'}, // this line is important, if this content-type is not set it wont work
         //     body: JSON.stringify({
-        //         "movieName":name,
-        //         "movieUrl":poster,
+        //         "gameName":name,
+        //         "gameUrl":poster,
         //         "rating":rating,
         //         "director":director
         //     })
         // });
         if(name != "" && poster != "" && rating >=0 && rating<=5 && director != ""){
             axios.post('http://localhost:3001/', {
-                "movieName":name,
-                        "movieUrl":poster,
+                        "gameName":name,
+                        "gameUrl":poster,
                         "rating":rating,
-                        "director":director
+                        "type":director,
+                        "developer":developer
               })
               .then(function (response) {
                 console.log(response);
@@ -52,7 +57,7 @@ export const Inputs = ()=>{
                 console.log(error);
               });
             console.log("done")
-            alert(`${name} saved in WatchList`)
+            alert(`${name} saved in PlayList`)
         }else{
             alert("Please fill all the fields and keep ratings out of 5")
         }
@@ -67,22 +72,37 @@ export const Inputs = ()=>{
     return(
         <div className="InputDiv">
         <div>
-            <label>Movie Name :</label>
+            <label >Game Name :</label>
             <input type="text"  onChange={(e)=>handleName(e.target.value)}/>
         </div>
         <div>
-            <label>Movie Poster :</label>
+            <label>Game Poster :</label>
             <input type="text" placeholder="paste the URL Here"  onChange={(e)=>handlePoster(e.target.value)}/>
         </div>
         <div>
-            <label>Rating :</label>
-            <input type="number" value={rating} max="5" min="0" placeholder="Rate the movie"  onChange={(e)=>handleRating(e.target.value)}/>
+            <label>Developer :</label>
+            <input type="text" placeholder="Developed by" onChange={(e)=>handleDeveloper(e.target.value)}/>
         </div>
         <div>
-            <label>Director :</label>
-            <input type="text" placeholder="Directed by" onChange={(e)=>handleDirector(e.target.value)}/>
+            <label>Rating :</label>
+            <input type="number" value={rating} max="5" min="0" placeholder="Rate the game"  onChange={(e)=>handleRating(e.target.value)}/>
         </div>
-        <button onClick={handleSave}>Save Movie</button>
+        <div>
+            <label>Type :</label>
+            {/* <input type="text" placeholder="Game Type" /> */}
+            <select onChange={(e)=>handleDirector(e.target.value)}>
+                <option>Game Type</option>
+                <option>FPS Campaign</option>
+                <option>FPS Online</option>
+                <option>Open - World FPS</option>
+                <option>Open - World RPG</option>
+                <option>Open World Campaign</option>
+                <option>Open World Online</option>
+                <option>Level Based</option>
+                <option>Others</option>
+            </select>
+        </div>
+        <button onClick={handleSave}>Save game</button>
         </div>
     )
 }

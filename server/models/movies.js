@@ -1,11 +1,11 @@
 const mongoose = require("mongoose")
 
 const movieSchema = new mongoose.Schema({
-  movieName:{
+  gameName:{
       type:String,
       required:true
   },
-  movieUrl:{
+  gameUrl:{
       type:String,
       required:true
   },
@@ -13,9 +13,13 @@ const movieSchema = new mongoose.Schema({
       type:Number,
       required:true
   },
-  director:{
+  type:{
       type:String,
       required:true
+  },
+  developer:{
+      type:String,
+      required:false
   }
 })
 
