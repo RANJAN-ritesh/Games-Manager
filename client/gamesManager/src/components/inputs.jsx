@@ -48,7 +48,9 @@ export const Inputs = ()=>{
                         "gameUrl":poster,
                         "rating":rating,
                         "type":director,
-                        "developer":developer
+                        "developer":developer,
+                        "completion":"0"
+                        
               })
               .then(function (response) {
                 console.log(response);
@@ -72,23 +74,23 @@ export const Inputs = ()=>{
     return(
         <div className="InputDiv">
         <div>
-            <label >Game Name :</label>
+            <label >GAME NAME :</label>
             <input type="text"  onChange={(e)=>handleName(e.target.value)}/>
         </div>
         <div>
-            <label>Game Poster :</label>
+            <label>GAME POSTER :</label>
             <input type="text" placeholder="paste the URL Here"  onChange={(e)=>handlePoster(e.target.value)}/>
         </div>
         <div>
-            <label>Developer :</label>
+            <label>DEVELOPER :</label>
             <input type="text" placeholder="Developed by" onChange={(e)=>handleDeveloper(e.target.value)}/>
         </div>
         <div>
-            <label>Rating :</label>
+            <label>RATING :</label>
             <input type="number" value={rating} max="5" min="0" placeholder="Rate the game"  onChange={(e)=>handleRating(e.target.value)}/>
         </div>
         <div>
-            <label>Type :</label>
+            <label>TYPE :</label>
             {/* <input type="text" placeholder="Game Type" /> */}
             <select onChange={(e)=>handleDirector(e.target.value)}>
                 <option>Game Type</option>
@@ -102,7 +104,7 @@ export const Inputs = ()=>{
                 <option>Others</option>
             </select>
         </div>
-        <button onClick={handleSave}>Save game</button>
+        <button onClick={handleSave}>SAVE GAME</button>
         </div>
     )
 }

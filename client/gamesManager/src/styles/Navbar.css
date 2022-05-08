@@ -1,0 +1,30 @@
+.Navbar{
+    width: 100%;
+    height: 5%;
+    padding: 1rem;
+    position: fixed;
+    background-color: rgb(24, 8, 39);
+    top: 0;
+    left: 1;
+}
+.routeBtns>button{
+  font-size: 1.1rem;
+  font-weight: 550;
+  padding: 0.4rem 0.7rem;
+  background-color: red;
+  color: white;
+  border: none;
+  margin-right: 1.5rem;
+  border-radius: 0.1rem;
+  cursor: pointer;
+}
+.NavParent{
+    display: flex;
+}
+.NavParent>div>img{
+    margin-left: 2rem;
+    width: 2.9rem;
+}
+.routeBtns{
+    margin-left: 38rem;
+}

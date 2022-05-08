@@ -25,7 +25,7 @@ export const CompletedGames = ()=>{
                       <p>Name : {e.gameName}</p>
                      <p>Type : {e.type}</p>
                      <p>Developer : {e.developer}</p>
-                     <p>Rating : {e.rating}</p>
+                     <p>Rating : {e.rating} <span style={{marginLeft:"5.5rem",fontWeight:"700",fontSize:"1.1rem",color:"green",border:"2px solid green",padding:"0.1rem 0.6rem",borderRadius:"0.9rem"}}>GAME COMPLETED</span></p>
                      <div className="mapBtnDiv">
                      <button onClick={()=>HandleDelete(e._id)}>Delete</button>
                      </div>

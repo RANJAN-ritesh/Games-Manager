@@ -20,6 +20,10 @@ const movieSchema = new mongoose.Schema({
   developer:{
       type:String,
       required:false
+  },
+  completion:{
+      type:String,
+      required:false
   }
 })
 

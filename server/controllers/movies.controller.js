@@ -30,4 +30,14 @@ router.delete("/:id",async(req,res)=>{
     }
 })
 
+router.patch("/:id",async(req,res)=>{
+
+    try {
+        const data = await movie.updateOne({_id : req.params.id},{$set:{completion:req.body.completion }})
+        res.send(data)
+    } catch (error) {
+        res.json({message:error})
+    }
+})
+
 module.exports = router
