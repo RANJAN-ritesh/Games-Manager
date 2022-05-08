@@ -22,10 +22,12 @@ export const CompletedGames = ()=>{
                       <img src={e.gameUrl} alt="img"/>
                       </div>
                       <div className="detailsDiv">
-                      <p>Name : {e.gameName}</p>
-                     <p>Type : {e.type}</p>
-                     <p>Developer : {e.developer}</p>
-                     <p>Rating : {e.rating} <span style={{marginLeft:"5.5rem",fontWeight:"700",fontSize:"1.1rem",color:"green",border:"2px solid green",padding:"0.1rem 0.6rem",borderRadius:"0.9rem"}}>GAME COMPLETED</span></p>
+                      <p><span className="detailsSpan">NAME : </span>{e.gameName}</p>
+                     <p><span className="detailsSpan">TYPE :</span> {e.type}</p>
+                     <p><span className="detailsSpan">DEVELOPER : </span>{e.developer}</p>
+                     {/* <p ><span className="detailsSpan">RATING : </span>{e.rating}</p> */}
+                     <p><span className="detailsSpan">RATING :</span> {e.rating} <span style={{marginLeft:"5.5rem",fontWeight:"700",fontSize:"1.2rem",color:"green",border:"2.5px solid green",
+                                                          padding:"0.1rem 0.6rem",borderRadius:"0.9rem"}}>GAME COMPLETED</span></p>
                      <div className="mapBtnDiv">
                      <button onClick={()=>HandleDelete(e._id)}>Delete</button>
                      </div>

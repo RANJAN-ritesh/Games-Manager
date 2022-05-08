@@ -18,6 +18,9 @@
   border-radius: 0.1rem;
   cursor: pointer;
 }
+.routeBtns>button:hover{
+    background-color: goldenrod;
+}
 .NavParent{
     display: flex;
 }
@@ -26,5 +29,5 @@
     width: 2.9rem;
 }
 .routeBtns{
-    margin-left: 38rem;
+    margin-left: 35rem;
 }

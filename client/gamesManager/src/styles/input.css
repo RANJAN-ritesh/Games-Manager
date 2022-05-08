@@ -25,10 +25,11 @@
     padding: 0.5rem 1rem;
     border: 2px solid black;
     background-color: rgb(233, 210, 210);
+    border-radius: 0.35rem;
 }
 .InputDiv>div>label{
    font-size: 1.5rem;
-   font-weight: 550;
+   font-weight: 650;
 }
 .InputDiv>div>select{
     width: 20rem;
@@ -38,6 +39,7 @@
     background-color: rgb(233, 210, 210);
     border: 2px solid black;
     cursor: pointer;
+    border-radius: 0.35rem;
 }
 .InputDiv>button{
     width: 16rem;
@@ -47,12 +49,13 @@
     color: white;
     margin-top: 2.8rem;
     margin-left: 3.4rem;
-    border: 2px solid white;
-    background-color: black;
+    border: none;
+    background-color: red;
     font-weight: 550;
+    border-radius: 0.29rem;
 }
 .InputDiv>button:hover{
-    background-color: blue;
+    background-color: goldenrod;
     /* color:black; */
     border:none;
     cursor: pointer;

@@ -6,7 +6,7 @@ import { addCompleted } from "../redux/action"
 
 export const Homepage = ()=>{
     const [dataArr,SetDataArr] = useState([])
-    const [completionFlag,setCompletionFlag] = useState(false)
+    const [completionFlag,setCompletionFlag] = useState(null)
     const [editcompletion,setEditCompletion] = useState(null)
     const dispatch = useDispatch()
 
@@ -38,7 +38,7 @@ export const Homepage = ()=>{
         alert("Game Added To Complete Games List")
     }
     function HandleSetEdit(e){
-        setCompletionFlag(true)
+        setCompletionFlag(e._id)
     }
     function HandleEdit(e){
         console.log(e)
@@ -48,7 +48,7 @@ export const Homepage = ()=>{
             "completion":editcompletion
         })
         alert("Completion Percent Edited")
-        setCompletionFlag(false)
+        setCompletionFlag(null)
     }
     return(
         <div className="MapParent">
@@ -60,16 +60,21 @@ export const Homepage = ()=>{
                       <img src={e.gameUrl} alt="img"/>
                       </div>
                       <div className="detailsDiv">
-                      <p><span className="detailsSpan">Name : </span>{e.gameName}</p>
-                     <p><span className="detailsSpan">Type :</span> {e.type}</p>
-                     <p><span className="detailsSpan">Developer : </span>{e.developer}</p>
-                     <p ><span className="detailsSpan">Rating : </span>{e.rating}</p>
+                      <p><span className="detailsSpan">NAME : </span>{e.gameName}</p>
+                     <p><span className="detailsSpan">TYPE :</span> {e.type}</p>
+                     <p><span className="detailsSpan">DEVELOPER : </span>{e.developer}</p>
+                     <p ><span className="detailsSpan">RATING : </span>{e.rating}</p>
                      <div className="editDiv">
                      {
-                     !completionFlag ?  <p><span className="detailsSpan" style={{color:"midnightblue"}}>Completion : </span>{e.completion} %</p>   : <div className="editingDiv">
+                     completionFlag == e._id
+                      ?<div className="editingDiv">
                     
                      <input type="Number" placeholder="Edit completion %" onChange={(e)=>setEditCompletion(e.target.value)}/>
                      <button onClick={()=>HandleEdit(e)}>Edit</button></div> 
+
+                     :   <p><span className="detailsSpan" style={{color:"midnightblue",fontWeight:"750"}}>COMPLETION  : </span>
+                     <span style={{color:"red",fontSize:"1.4rem",fontWeight:"650",borderRadius:"0.5rem"}}>{e.completion} </span><span style={{color:"red",fontSize:"1.2rem",fontWeight:"600"}}>%</span>
+                     </p> 
                      }
                     
                      </div>

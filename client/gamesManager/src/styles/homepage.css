@@ -44,22 +44,40 @@
     cursor: pointer;
 }
 .mapBtnDiv>button:hover{
-    background-color: rgb(10, 10, 59);
+    background-color: goldenrod;
 }
 .editDiv{
     display: flex;
     margin-top: -1rem;
 }
-.detailsSpan{
+.detailsDiv>p{
     font-size: 1.1rem;
-    font-weight: 550;
-  
-}
-.editingDiv>input{
-  width: 8rem;
-  border: 2px solid black;
+    }
+.detailsSpan{
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-right: 0.5rem;
 }
 .editingDiv{
     margin-top: 1rem;
     margin-bottom: 0.5rem;
+}
+.editingDiv>input{
+  width: 8rem;
+  border: 2px solid black;
+  color:black;
+  padding: 00.2rem 0.7rem;
+}
+.editDiv>input::placeholder{
+    color: black;
+}
+.editingDiv>button{
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    background-color: green;
+    border: green;
+    margin-left: 1rem;
+    padding: 00.25rem 0.8rem;
+    border-radius: 0.2rem;
 }
