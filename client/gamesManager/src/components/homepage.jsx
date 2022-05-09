@@ -69,8 +69,8 @@ export const Homepage = ()=>{
                      completionFlag == e._id
                       ?<div className="editingDiv">
                     
-                     <input type="Number" placeholder="Edit completion %" onChange={(e)=>setEditCompletion(e.target.value)}/>
-                     <button onClick={()=>HandleEdit(e)}>Edit</button></div> 
+                     <input type="Number" placeholder="EDIT COMPLETION %" onChange={(e)=>setEditCompletion(e.target.value)}/>
+                     <button onClick={()=>HandleEdit(e)}>EDIT</button></div> 
 
                      :   <p><span className="detailsSpan" style={{color:"midnightblue",fontWeight:"750"}}>COMPLETION  : </span>
                      <span style={{color:"red",fontSize:"1.4rem",fontWeight:"650",borderRadius:"0.5rem"}}>{e.completion} </span><span style={{color:"red",fontSize:"1.2rem",fontWeight:"600"}}>%</span>

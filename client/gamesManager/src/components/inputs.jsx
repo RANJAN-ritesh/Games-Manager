@@ -79,19 +79,19 @@ export const Inputs = ()=>{
         </div>
         <div>
             <label>GAME POSTER :</label>
-            <input type="text" placeholder="paste the URL Here"  onChange={(e)=>handlePoster(e.target.value)}/>
+            <input type="text" placeholder="PASTE THE URL HERE"  onChange={(e)=>handlePoster(e.target.value)}/>
         </div>
         <div>
             <label>DEVELOPER :</label>
-            <input type="text" placeholder="Developed by" onChange={(e)=>handleDeveloper(e.target.value)}/>
+            <input type="text"  onChange={(e)=>handleDeveloper(e.target.value)}/>
         </div>
         <div>
             <label>RATING :</label>
-            <input type="number" value={rating} max="5" min="0" placeholder="Rate the game"  onChange={(e)=>handleRating(e.target.value)}/>
+            <input type="number" value={rating} max="5" min="0" placeholder="RATE THE GAME"  onChange={(e)=>handleRating(e.target.value)}/>
         </div>
         <div>
             <label>TYPE :</label>
-            {/* <input type="text" placeholder="Game Type" /> */}
+            {/* <input type="text" placeholder="GAME TYPE" /> */}
             <select onChange={(e)=>handleDirector(e.target.value)}>
                 <option>Game Type</option>
                 <option>FPS Campaign</option>

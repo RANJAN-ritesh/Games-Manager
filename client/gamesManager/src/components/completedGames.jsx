@@ -14,7 +14,7 @@ export const CompletedGames = ()=>{
     return (
         <div className="MapParent">
           { 
-              Flag ? "No Completed Games Yet" :
+              Flag ? <h2>NO COMPLETED GAMES YET   .  .   </h2>:
               gamesArr.map((e)=>{
                   return(
                     <div className="MoviesDiv">
@@ -26,10 +26,11 @@ export const CompletedGames = ()=>{
                      <p><span className="detailsSpan">TYPE :</span> {e.type}</p>
                      <p><span className="detailsSpan">DEVELOPER : </span>{e.developer}</p>
                      {/* <p ><span className="detailsSpan">RATING : </span>{e.rating}</p> */}
-                     <p><span className="detailsSpan">RATING :</span> {e.rating} <span style={{marginLeft:"5.5rem",fontWeight:"700",fontSize:"1.2rem",color:"green",border:"2.5px solid green",
-                                                          padding:"0.1rem 0.6rem",borderRadius:"0.9rem"}}>GAME COMPLETED</span></p>
+                     <p><span className="detailsSpan">RATING :</span> {e.rating} </p>
                      <div className="mapBtnDiv">
-                     <button onClick={()=>HandleDelete(e._id)}>Delete</button>
+                     <button onClick={()=>HandleDelete(e._id)}>DELETE</button>
+                     <span style={{marginLeft:"5.5rem",fontWeight:"700",fontSize:"1.2rem",color:"green",border:"2.5px solid green",
+                                                          padding:"0.8rem 0.6rem",borderRadius:"0.9rem"}}>GAME COMPLETED</span>
                      </div>
                     
                       </div>

@@ -81,3 +81,7 @@
     padding: 00.25rem 0.8rem;
     border-radius: 0.2rem;
 }
+.editingDiv>button:hover{
+    background-color: greenyellow;
+    color: black;
+}
